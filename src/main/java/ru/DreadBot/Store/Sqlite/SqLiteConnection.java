@@ -5,11 +5,20 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+
+
 public class SqLiteConnection {
     private Connection connection;
+
+
+
     private final String dataBaseName = "TelegramDreadBot";
 
     public static final SqLiteConnection SQL_LITE_CONNECTION = new SqLiteConnection();
+
+    public String getDataBaseName() {
+        return dataBaseName;
+    }
 
     private SqLiteConnection() {
         try {

@@ -16,5 +16,8 @@ public class RunApp {
             throw new RuntimeException(e.getCause());
         }
 
+
+
+        //SpringApplication.run(RunApp.class, args);
     }
 }

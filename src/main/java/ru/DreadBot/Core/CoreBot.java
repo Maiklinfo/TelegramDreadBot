@@ -8,6 +8,7 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import ru.DreadBot.Store.BaseStore;
 import ru.DreadBot.Store.Sqlite.SqLiteStore;
 import ru.DreadBot.service.SendMessageOperationService;
+
 import java.time.LocalDate;
 
 import static ru.DreadBot.Constant.VarConstant.*;
@@ -17,6 +18,10 @@ public class CoreBot extends TelegramLongPollingBot {
     private BaseStore store = new SqLiteStore();
     private  boolean startPlanning;
 
+    //public CoreBot(SendMessageOperationService sendMessageOperationService, BaseStore store) {
+    //    this.sendMessageOperationService = sendMessageOperationService;
+    //    this.store = store;
+    //}
     @Override
     public void onUpdateReceived(Update update) {
         if (update.hasMessage() && update.getMessage().hasText()) {
@@ -61,6 +66,7 @@ public class CoreBot extends TelegramLongPollingBot {
     public String getBotUsername() {
         return "DreadBot";
     }
+
 
     @Override
     public String getBotToken() {

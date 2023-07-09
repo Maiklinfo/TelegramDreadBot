@@ -20,6 +20,10 @@ public class SendMessageOperationService {
     private final String INSTRUCTIONS  = "Хотите прочесть инструкцию?";
     private final ButtonsService buttonsService = new ButtonsService();
 
+    //public SendMessageOperationService() {
+      //  this.buttonsService = buttonsService;
+   // }
+
 
 
     public SendMessage createGreetingInformation(Update update) {

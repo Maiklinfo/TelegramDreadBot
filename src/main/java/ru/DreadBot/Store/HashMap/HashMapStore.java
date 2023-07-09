@@ -10,6 +10,7 @@ import java.util.Map;
 
 import static java.util.Arrays.asList;
 
+
 public class HashMapStore implements BaseStore {
 
     private Map<LocalDate, List<String>> localStore = new HashMap<>();
