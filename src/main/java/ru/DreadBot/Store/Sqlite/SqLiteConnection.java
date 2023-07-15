@@ -9,17 +9,11 @@ import java.sql.Statement;
 
 public class SqLiteConnection {
     private Connection connection;
-
-
-
     private final String dataBaseName = "TelegramDreadBot";
-
     public static final SqLiteConnection SQL_LITE_CONNECTION = new SqLiteConnection();
-
     public String getDataBaseName() {
         return dataBaseName;
     }
-
     private SqLiteConnection() {
         try {
             String databaseName = "telegramBot.db";
@@ -30,11 +24,9 @@ public class SqLiteConnection {
             e.printStackTrace();
         }
     }
-
     public Connection getConnection() {
         return connection;
     }
-
     private void initTable() throws SQLException {
         Statement statement = connection.createStatement();
         statement.executeUpdate("CREATE TABLE IF NOT EXISTS deals ("
@@ -43,6 +35,4 @@ public class SqLiteConnection {
                 + " description Text"
                 + ")");
     }
-
-
 }
