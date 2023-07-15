@@ -57,8 +57,6 @@ public class CoreBot extends TelegramLongPollingBot {
                     executeMessage(text);
 
             }
-
-
         }
     }
 
@@ -66,7 +64,6 @@ public class CoreBot extends TelegramLongPollingBot {
     public String getBotUsername() {
         return "DreadBot";
     }
-
 
     @Override
     public String getBotToken() {

@@ -10,7 +10,6 @@ public class Deal {
         this.date = date;
         this.description = description;
     }
-
     public Integer getId() {
         return id;
     }

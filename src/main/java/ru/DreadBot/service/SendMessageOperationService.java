@@ -24,15 +24,12 @@ public class SendMessageOperationService {
       //  this.buttonsService = buttonsService;
    // }
 
-
-
     public SendMessage createGreetingInformation(Update update) {
         SendMessage massage = createSimpleMessage(update, GREETING_MASSEGE);
         ReplyKeyboardMarkup keyboardMarkup =
                 buttonsService.setButtons(buttonsService.createButtons(asList(START_PLANNING, END_PLANNING, SHOW_DEALS)));
         massage.setReplyMarkup(keyboardMarkup);
         return massage;
-
     }
         public SendMessage createPlanningMassege(Update update) {
             return  createSimpleMessage(update, PLANING_MASSEGE);

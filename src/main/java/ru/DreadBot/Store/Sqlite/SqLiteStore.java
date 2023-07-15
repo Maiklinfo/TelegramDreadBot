@@ -18,7 +18,6 @@ public class SqLiteStore implements BaseStore {
 
     @Override
     public void save(LocalDate date, String deal) {
-
         try {
             PreparedStatement insertStmt = sqlLiteConnection.prepareStatement(
                     "INSERT INTO deals(date, description) VALUES(?, ?)");
@@ -33,7 +32,6 @@ public class SqLiteStore implements BaseStore {
             System.out.println(("can not save to DB"));
         }
     }
-
     @Override
     public List<String> selectAll(LocalDate date) {
         List<Deal> result = new ArrayList<>();

@@ -12,7 +12,6 @@ import java.util.List;
 
 public class ButtonsService {
 
-
     public ReplyKeyboardMarkup setButtons (List<KeyboardRow>keyboardRowList) {
         ReplyKeyboardMarkup replyKeyboardMarkup = new ReplyKeyboardMarkup();
         replyKeyboardMarkup.setSelective(true);
@@ -44,9 +43,6 @@ public class ButtonsService {
          inlineKeyboardMarkup.setKeyboard(keyBoardList);
          return inlineKeyboardMarkup;
     }
-
-
-
     }
 
 
